@@ -12,9 +12,9 @@ void _sub(stack_t **stack, unsigned int line_count)
 {
 	int res;
 
-	if (!stack || !((*stack)->next))
+	if (!*stack || !stack || !((*stack)->next))
 	{
-		fprintf(stderr, "L%d: can't sub, stack too short\n", line_cnt);
+		fprintf(stderr, "L%d: can't sub, stack too short\n", line_count);
 		status = EXIT_FAILURE;
 		return;
 	}
