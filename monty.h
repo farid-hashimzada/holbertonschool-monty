@@ -1,5 +1,5 @@
 #ifndef MONTY_HEADER
-#define MONTY_HEADER
+#define MONTY_HEADERhttps://github.com/farid-hashimzada/holbertonschool-monty/blob/master/monty.h
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -45,5 +45,6 @@ void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
+void _sub(stack_t **stack, unsigned int line_count);
 
 #endif
