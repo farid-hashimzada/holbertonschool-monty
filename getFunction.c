@@ -16,6 +16,7 @@ void get_function(char *opcode, int count, stack_t **stack)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", _sub},
 		{NULL, NULL},
 	};
 
