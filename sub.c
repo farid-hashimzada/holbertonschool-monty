@@ -10,16 +10,16 @@
  */
 void _sub(stack_t **stack, unsigned int line_count)
 {
-	int res;
+	int res = 0;
+	stack_t *tmp = *stack;
 
-	if (!stack || !((*stack)->next))
+	if (!tmp || !tmp->next)
 	{
-		fprintf(stderr, "L%d: can't sub, stack too short\n", line_cnt);
-		status = EXIT_FAILURE;
-		return;
+		fprintf(stderr, "L%d: can't sub, stack too short\n", line_count);
+		exit(EXIT_FAILURE);
 	}
 
-	res = ((*stack)->next->n) - ((*stack)->n);
-	pop(stack, line_cnt);
+	res = tmp->next->n - tmp->n;
+	pop(stack, line_count);
 	(*stack)->n = res;
 }
